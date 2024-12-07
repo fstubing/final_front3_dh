@@ -8,8 +8,8 @@ const Favs = () => {
   return (
     <main className="container mt-3 extra-m" data-bs-theme={state.theme}>
       <h1>Dentists Favs</h1>
-      <div className="row row-cols-1 row-cols-md-3 g-4">
-        <div>
+      <div>
+        <div className="row row-cols-1 row-cols-md-3 g-4">
           {state.favs.map((user) => (
             <Card key={user.id} user={user} />
           ))}
