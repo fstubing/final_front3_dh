@@ -132,3 +132,11 @@ tr:nth-child(even) {
 .light {
   display: none;
 }
+
+.oscuro {
+  background-color: darkslategray;
+}
+
+.claro {
+  background-color: white;
+}

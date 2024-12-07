@@ -11,11 +11,15 @@ export const reducer = (state, action) => {
       return { ...state, favs: filterFavs };
     case "TOGGLE_THEME":
       if (action.payload == "light") {
+        document.body.classList.remove("claro");
+        document.body.classList.add("oscuro");
         return {
           ...state,
           theme: "dark",
         };
       } else if (action.payload == "dark") {
+        document.body.classList.remove("oscuro");
+        document.body.classList.add("claro");
         return {
           ...state,
           theme: "light",
