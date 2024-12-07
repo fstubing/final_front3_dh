@@ -1,12 +1,18 @@
-import React from 'react'
-
+import { useUserStates } from "../Context/Context";
 const Footer = () => {
+  const { state } = useUserStates();
   return (
-    <footer>
-        <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
+    <footer
+      className="navbar fixed-bottom bg-body-tertiary"
+      data-bs-theme={state.theme}
+    >
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#">
+          Desarrollado por FSA
+        </a>
+      </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
